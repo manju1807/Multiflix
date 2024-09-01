@@ -9,6 +9,9 @@ import DetailsContainer from "@/components/containers/movies/details-container";
 import BlurIn from "@/components/magicui/blur-in";
 import BlurFadeText from "@/components/blur-fade-text";
 import BlurFade from "@/components/Blurfade";
+import { HomeFeatures } from "@/components/features";
+import { cn } from "@/lib/utils";
+import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 
 export default async function Home() {
   const delay = 0.04
@@ -20,7 +23,13 @@ export default async function Home() {
         <section className="flex h-[75vh] items-center md:h-[50vh]">
           <BlurFade delay={delay * 2}>
             <div className="mx-auto flex w-4/5 flex-col items-center justify-center space-y-4 text-center">
-              <h1 className="text-6xl font-bold">Explore <span className="text-[#5046e6]">movies,</span> tv series, and <span className="text-[#5046e6]">animes!</span></h1>
+              <AnimatedGradientText>
+                <h1 className="text-6xl font-bold">Explore <span className={cn(
+                  `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+                )}>movies,</span> tv series, and <span className={cn(
+                  `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ff8040] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+                )}>animes!</span></h1>
+              </AnimatedGradientText>
               <BlurFadeText
                 className="text-sm leading-6 text-muted-foreground"
                 delay={delay}
@@ -47,6 +56,7 @@ export default async function Home() {
           </Suspense>
         </div>
       </section>
+      <HomeFeatures />
       <section className="space-y-8">
         <Craft.Section>
           <Craft.Container>
