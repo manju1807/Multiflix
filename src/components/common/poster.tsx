@@ -1,14 +1,14 @@
 import Image from "next/image";
-import { Image as LucideImage } from "lucide-react";
 import { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
+import Img1 from "@/public/movies/cZ0d3rtvXPVvuiX22sP79K3Hmjz.jpg"
 
 type PosterProps = {
   url?: string;
   alt: string;
 } & ComponentProps<"div">;
 
-export const Poster = ({ url, alt, className, ...props }: PosterProps) => {
+export const Poster = ({ className, ...props }: PosterProps) => {
   return (
     <div
       className={cn(
@@ -17,25 +17,14 @@ export const Poster = ({ url, alt, className, ...props }: PosterProps) => {
       )}
       {...props}
     >
-      {url ? (
-        <Image
-          fill
-          className="object-fill"
-          loading="lazy"
-          sizes="100%"
-          alt={alt}
-          src={`https://image.tmdb.org/t/p/original${url}`}
-        />
-      ) : (
-        <Image
-          fill
-          className="object-fill"
-          loading="lazy"
-          sizes="100%"
-          alt={alt}
-          src={`http://via.placeholder.com/1280x720`}
-        />
-      )}
+      <Image
+        fill
+        className="object-fill"
+        loading="lazy"
+        sizes="100%"
+        alt={'alt'}
+        src={`${Img1.src}`}
+      />
     </div>
   );
 };
