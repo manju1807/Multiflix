@@ -1,0 +1,36 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+*.html
+
+# Ignore all markdown files:
+*.md
+
+# Ignore node_modules:
+node_modules
+
+# Ignore all JSON files:
+*.json
+
+# Ignore all YAML files:
+*.yml
+*.yaml
+
+# Ignore specific directories:
+.next
+.vscode
+public
+
+# Ignore all minified files
+*.min.js
+*.min.css
+
+# Ignore all TypeScript declaration files:
+*.d.ts
+
+# Ignore specific files:
+.gitignore
+.prettierignore
+.eslintignore
