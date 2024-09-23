@@ -1,9 +1,9 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "EnjoyTown",
+  name: "Multiflix",
   description:
-    "Beautifully designed website where you can watch anime, drama, movies and read mangas for free. Built with Next.JS and shadcn/ui.",
+    "A beautifully crafted website offering free access to anime, dramas and movies. Developed using Next.js and shadcn/ui.",
   mainNav: [
     {
       title: "Drama",
@@ -16,10 +16,6 @@ export const siteConfig = {
     {
       title: "Anime",
       href: "/anime",
-    },
-    {
-      title: "Manga",
-      href: "/manga",
     },
     {
       title: "TV",

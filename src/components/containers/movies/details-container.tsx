@@ -33,7 +33,7 @@ const DetailsContainer = ({ embed }: any) => {
               backgroundPosition: "center",
             }}
             className="h-full w-full brightness-75"
-            movieData-testid="banner"
+            moviedata-testid="banner"
           />
         </div>
 

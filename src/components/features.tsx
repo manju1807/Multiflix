@@ -6,7 +6,6 @@ import {
   Globe as GlobeLucide,
   Users,
 } from "lucide-react";
-import Image from "next/image";
 import { ComponentProps, PropsWithChildren } from "react";
 import { Globe } from "@/components/globe";
 

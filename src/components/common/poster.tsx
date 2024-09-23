@@ -12,7 +12,7 @@ export const Poster = ({ className, ...props }: PosterProps) => {
   return (
     <div
       className={cn(
-        "relative flex aspect-poster w-full items-center justify-center overflow-hidden rounded-lg border bg-muted text-muted shadow",
+        "relative flex aspect-[2/3] h-96 w-[90%] mx-auto md:aspect-poster md:w-full items-center justify-center overflow-hidden rounded-lg border bg-muted text-muted shadow",
         className
       )}
       {...props}
@@ -20,10 +20,10 @@ export const Poster = ({ className, ...props }: PosterProps) => {
       <Image
         fill
         className="object-fill"
-        loading="lazy"
         sizes="100%"
         alt={'alt'}
         src={`${Img1.src}`}
+        priority
       />
     </div>
   );

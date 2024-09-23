@@ -12,6 +12,7 @@ import BlurFade from "@/components/Blurfade";
 import { HomeFeatures } from "@/components/features";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
+import MarqueeSection from "@/components/marquee";
 
 export default async function Home() {
   const delay = 0.04
@@ -49,30 +50,25 @@ export default async function Home() {
           </BlurFade>
         </section>
       </div>
-      <section className="pb-12 py-8">
+      <section className="pb-12 py-8 px-4">
         <div className="mx-auto aspect-auto w-full max-w-6xl overflow-hidden rounded-md border bg-background shadow-lg dark:shadow-none md:aspect-">
           <Suspense fallback={<Skeleton className="h-full w-full" />}>
             <DetailsContainer embed />
           </Suspense>
         </div>
       </section>
-      <HomeFeatures />
-      <section className="space-y-8">
-        <Craft.Section>
-          <Craft.Container>
-            <section className="py-8" id="posts">
-              <div className="mx-auto max-w-6xl space-y-8">
-                <div className="flex flex-col items-center space-y-2">
-                  <h2 className="text-2xl font-bold">Latest Posts</h2>
-                  <p className="w-2/3 text-center text-muted-foreground">
-                    Find out the latest info on what have been updated.
-                  </p>
-                </div>
-              </div>
-            </section>
-          </Craft.Container>
-        </Craft.Section>
+      <section id="posts">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col items-center space-y-2">
+            <h2 className="text-2xl font-bold">Our Latest Collections</h2>
+            <p className="w-2/3 text-center text-muted-foreground">
+              Find out the latest info on what have been updated.
+            </p>
+          </div>
+          <MarqueeSection />
+        </div>
       </section>
+      <HomeFeatures />
     </>
   );
 }
