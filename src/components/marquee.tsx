@@ -146,8 +146,8 @@ export default function MarqueeSection() {
               <Card key={movie.id} item={movie} />
             ))}
         </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-1/12 bg-gradient-to-r from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 h-full  w-1/12 bg-gradient-to-l from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-[2%] bg-gradient-to-r from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 h-full  w-[2%] bg-gradient-to-l from-background"></div>
       </div>
     </section>
   );
