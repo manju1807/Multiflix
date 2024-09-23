@@ -2,17 +2,15 @@ import { Navbar } from "@/components/navbar";
 import { Pattern } from "@/components/pattern";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import * as Craft from "@/components/ui/craft";
 import Link from "next/link";
 import { Suspense } from "react";
-import DetailsContainer from "@/components/containers/movies/details-container";
-import BlurIn from "@/components/magicui/blur-in";
 import BlurFadeText from "@/components/blur-fade-text";
 import BlurFade from "@/components/Blurfade";
 import { HomeFeatures } from "@/components/features";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 import MarqueeSection from "@/components/marquee";
+import DetailsContainer from "@/components/containers/movies/details-container";
 
 export default async function Home() {
   const delay = 0.04

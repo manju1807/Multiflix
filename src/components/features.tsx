@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import { ComponentProps, PropsWithChildren } from "react";
 import { Globe } from "@/components/globe";
+import Reviews from "./reviews";
+import Genres from "./genres";
 
 type HomeFeatureProps = {
   icon: LucideIcon;
@@ -56,20 +58,20 @@ export const HomeFeatures = () => {
         <div className="flex flex-col items-center space-y-2">
           <h2 className="text-2xl font-bold">Multiflix Features</h2>
           <p className="w-2/3 text-center text-muted-foreground">
-            Multiflix is a haven for cinema enthusiasts, offering a vast library of movies and TV series. Discover detailed information including synopses, cast, budgets, and more.
+            Multiflix is a heaven for cinema enthusiasts, offering a vast library of movies and TV series. Discover detailed information including synopses, cast, budgets, and more.
           </p>
         </div>
 
         <ul className="grid grid-cols-1 gap-4 p-4 lg:grid-cols-3 lg:p-0">
           <HomeFeature
-            title={"List"}
+            title={"Genres List"}
             description={
               "Discover and enjoy free streaming content across various genres."
             }
             className="col-span-1 aspect-[16/9] lg:col-span-2"
             icon={List}
           >
-            <span className="animate-pulse">Work in progress...</span>
+            <Genres />
           </HomeFeature>
 
           <HomeFeature
@@ -80,7 +82,7 @@ export const HomeFeatures = () => {
             }
             className="col-span-1"
           >
-            <span className="animate-pulse">Work in progress...</span>
+            <Reviews />
           </HomeFeature>
 
           <HomeFeature
