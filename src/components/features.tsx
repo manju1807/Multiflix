@@ -6,10 +6,12 @@ import {
   Globe as GlobeLucide,
   Users,
 } from "lucide-react";
+
 import { ComponentProps, PropsWithChildren } from "react";
 import { Globe } from "@/components/globe";
 import Reviews from "./reviews";
 import Genres from "./genres";
+import Headings from "./common/headings";
 
 type HomeFeatureProps = {
   icon: LucideIcon;
@@ -17,6 +19,7 @@ type HomeFeatureProps = {
   description: string;
 } & ComponentProps<"li"> &
   PropsWithChildren;
+
 
 const HomeFeature = ({
   icon: Icon,
@@ -43,7 +46,7 @@ const HomeFeature = ({
         <p className="text-sm text-muted-foreground">{description}</p>
       </div>
 
-      <div className="pointer-events-none relative flex h-full w-full select-none items-center justify-center overflow-hidden rounded-lg border text-muted-foreground shadow">
+      <div className="relative flex flex-1 overflow-hidden rounded-lg border text-muted-foreground shadow items-center justify-center">
         {children}
       </div>
     </li>
@@ -51,24 +54,19 @@ const HomeFeature = ({
 };
 
 export const HomeFeatures = () => {
-
   return (
     <section className="py-8" id="features">
       <div className="mx-auto max-w-6xl space-y-8">
         <div className="flex flex-col items-center space-y-2">
-          <h2 className="text-2xl font-bold">Multiflix Features</h2>
-          <p className="w-2/3 text-center text-muted-foreground">
-            Multiflix is a heaven for cinema enthusiasts, offering a vast library of movies and TV series. Discover detailed information including synopses, cast, budgets, and more.
-          </p>
+          <Headings heading={'Multiflix Features'} subheading={'Multiflix is a heaven for cinema enthusiasts, offering a vast library of movies and TV series. Discover detailed information including synopses, cast, budgets, and more.'} />
         </div>
-
         <ul className="grid grid-cols-1 gap-4 p-4 lg:grid-cols-3 lg:p-0">
           <HomeFeature
             title={"Genres List"}
             description={
               "Discover and enjoy free streaming content across various genres."
             }
-            className="col-span-1 aspect-[16/9] lg:col-span-2"
+            className="col-span-1 lg:col-span-2 h-[440px]"
             icon={List}
           >
             <Genres />
@@ -100,7 +98,7 @@ export const HomeFeatures = () => {
             icon={Users}
             title={"Communities"}
             description={"Create or participate in specific niche communities."}
-            className="col-span-1  aspect-[16/9] lg:col-span-2"
+            className="col-span-1 lg:col-span-2"
           >
             <span className="animate-pulse">Work in progress...</span>
           </HomeFeature>
