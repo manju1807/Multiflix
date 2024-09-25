@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/navbar";
 import { Pattern } from "@/components/pattern";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Suspense } from "react";
@@ -12,7 +11,6 @@ export default async function Home() {
   return (
     <>
       <Pattern variant="checkered" />
-      <Navbar />
       <div className="mx-auto max-w-4xl p-4">
         <HeroText />
       </div>

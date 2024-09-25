@@ -49,13 +49,13 @@ export function MainNav() {
                   <ListItem href="/movie" title="Movie">
                     Explore Movie Marvels: Spectacles Await You!
                   </ListItem>
-                  <ListItem href="/tv" title="Tv Shows">
+                  <ListItem href="/" title="Tv Shows">
                     Live on TV Shows: Addiction await ≥
                   </ListItem>
-                  <ListItem href="/drama" title="Drama">
+                  <ListItem href="/" title="Drama">
                     Indulge in Drama: Emotions Await!
                   </ListItem>
-                  <ListItem href="/anime" title="Anime">
+                  <ListItem href="/" title="Anime">
                     Dive into Anime Worlds: Adventures Await!
                   </ListItem>
                 </ul>

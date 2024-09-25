@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [{
+    remotePatterns: [
+      {
         protocol: "https",
         hostname: "sup-proxy.zephex0-f6c.workers.dev",
-    }]
+      },
+      {
+        protocol: "https",
+        hostname: "image.tmdb.org",
+      }
+    ]
   },
   experimental: {
     serverActions: {

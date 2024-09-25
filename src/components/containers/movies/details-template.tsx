@@ -1,7 +1,7 @@
 import { format } from "date-fns";
-import { Poster } from "@/components/common/poster";
+import { Poster } from "./poster-template";
 import Link from "next/link";
-import { Play } from "lucide-react";
+import { Download, Play } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
@@ -11,14 +11,10 @@ import {
 } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { BorderBeam } from "@/components/magicui/border-beam";
-import { movieData } from "@/data/main";
-import Img from "@/public/movies/foGkPxpw9h8zln81j63mix5B7m8.jpg"
 
-const DetailsContainer = ({ embed }: any) => {
+const DetailsContainerTemplate = ({ data, id, embed }: any) => {
   return (
-    <div className="antialiased relative border rounded-lg">
-      <BorderBeam />
+    <div className="">
       <div className={cn("mx-auto max-w-6xl", embed ? "p-0" : "md:pt-4")}>
         <div
           className={cn(
@@ -28,31 +24,32 @@ const DetailsContainer = ({ embed }: any) => {
         >
           <div
             style={{
-              backgroundImage: `url(${Img.src})`,
+              backgroundImage: `url('https://sup-proxy.zephex0-f6c.workers.dev/api-content?url=https://image.tmdb.org/t/p/original${data.backdrop_path}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-            className="h-full w-full brightness-75"
-            moviedata-testid="banner"
+            className="h-full w-full brightness-50"
+            data-testid="banner"
           />
         </div>
 
         <div className="mx-auto my-8 max-w-4xl space-y-8 p-4 md:space-y-12 md:p-0 ">
           <main className="flex flex-col gap-4 md:flex-row">
-            <aside className="-mt-24 mx-auto w-4/5 space-y-2 md:-ml-8 md:-mt-32 md:w-1/3">
-              <Poster url={movieData.poster_path} alt={movieData.title} />
+            <aside className="-mt-24 w-full space-y-2  md:-mt-32 md:w-1/3">
+              <Poster url={data.poster_path} alt={data.title} />
             </aside>
+
             <article className="flex w-full flex-col gap-2 md:w-2/3">
-              {movieData.release_date && (
+              {data.release_date && (
                 <span className="text-xs text-muted-foreground">
-                  {format(new Date(movieData.release_date), "PPP", {})}
+                  {format(new Date(data.release_date), "PPP", {})}
                 </span>
               )}
-              <h1 className="text-lg font-bold md:text-4xl">{movieData.title}</h1>
+              <h1 className="text-lg font-bold md:text-4xl">{data.title}</h1>
               <div className="flex flex-wrap items-center gap-2">
-                {movieData.genres.length > 0 && (
+                {data.genres.length > 0 && (
                   <>
-                    {movieData.genres.map((genre: any) => {
+                    {data.genres.map((genre: any) => {
                       return (
                         <Badge
                           key={genre.id}
@@ -71,17 +68,29 @@ const DetailsContainer = ({ embed }: any) => {
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Badge>{movieData.vote_average.toFixed(1)}</Badge>
+                      <Badge>{data.vote_average.toFixed(1)}</Badge>
                     </TooltipTrigger>
+
                     <TooltipContent>
-                      <p>{movieData.vote_count} votes</p>
+                      <p>{data.vote_count} votes</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
               </div>
               <p className="text-xs leading-5 text-muted-foreground md:text-sm md:leading-6">
-                {movieData.overview}
+                {data.overview}
               </p>
+              <div className="flex flex-wrap items-center gap-1">
+                <Link href={`/movie/watch/${id}`}>
+                  <Badge
+                    variant="outline"
+                    className="cursor-pointer whitespace-nowrap"
+                  >
+                    <Play className="mr-1.5" size={12} />
+                    Watch
+                  </Badge>
+                </Link>
+              </div>
             </article>
           </main>
         </div>
@@ -90,4 +99,4 @@ const DetailsContainer = ({ embed }: any) => {
   );
 };
 
-export default DetailsContainer;
+export default DetailsContainerTemplate;

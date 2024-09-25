@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { Footer } from '@/components/footer';
+import { Navbar } from '@/components/navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -36,7 +37,10 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <div className="relative flex min-h-screen flex-col antialiased">
-              <div className="flex-1">{children}</div>
+              <div className="flex-1">
+                <Navbar />
+                {children}
+              </div>
             </div>
             <Footer />
             <TailwindIndicator />
