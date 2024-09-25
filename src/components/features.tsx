@@ -12,6 +12,7 @@ import { Globe } from "@/components/globe";
 import Reviews from "./reviews";
 import Genres from "./genres";
 import Headings from "./common/headings";
+import InteractiveMetricsChart from "./metric-chart";
 
 type HomeFeatureProps = {
   icon: LucideIcon;
@@ -96,11 +97,11 @@ export const HomeFeatures = () => {
 
           <HomeFeature
             icon={Users}
-            title={"Communities"}
-            description={"Create or participate in specific niche communities."}
-            className="col-span-1 lg:col-span-2"
+            title={"Streaming Analytics"}
+            description={"Gain insights into viewing trends and audience preferences."}
+            className="col-span-1 lg:col-span-2 h-[500px]"
           >
-            <span className="animate-pulse">Work in progress...</span>
+            <InteractiveMetricsChart />
           </HomeFeature>
         </ul>
       </div>
