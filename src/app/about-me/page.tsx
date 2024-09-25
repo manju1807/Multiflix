@@ -24,7 +24,8 @@ const data = [
   'JavaScript Developer'
 ];
 
-const AboutPage = ({ embed = false }) => {
+const AboutPage = () => {
+  const embed = false
   return (
     <div>
       <div className={cn("mx-auto max-w-6xl pt-8 md:pt-0", embed ? "p-0" : "md:pt-4")}>
