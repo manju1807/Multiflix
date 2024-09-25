@@ -4,7 +4,7 @@ import {
   LucideIcon,
   MessageSquare,
   Globe as GlobeLucide,
-  Users,
+  ChartPie,
 } from "lucide-react";
 
 import { ComponentProps, PropsWithChildren } from "react";
@@ -96,7 +96,7 @@ export const HomeFeatures = () => {
           </HomeFeature>
 
           <HomeFeature
-            icon={Users}
+            icon={ChartPie}
             title={"Streaming Analytics"}
             description={"Gain insights into viewing trends and audience preferences."}
             className="col-span-1 lg:col-span-2 h-[500px]"
