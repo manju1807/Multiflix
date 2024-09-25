@@ -120,7 +120,7 @@ const AboutPage = ({ embed = false }) => {
                       )}
                     >
                       <Icons.twitter className="h-5 w-5 fill-current" />
-                      <span className="sr-only">Twitter</span>
+                      <span className="sr-only">Twitter!</span>
                     </div>
                   </Link>
                 </nav>
