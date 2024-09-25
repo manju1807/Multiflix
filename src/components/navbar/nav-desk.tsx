@@ -2,7 +2,6 @@
 
 import {
   Home,
-  List,
   Tv,
 } from "lucide-react";
 import * as React from "react";
@@ -47,27 +46,19 @@ export function MainNav() {
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[400px]">
                   <ListItem href="/movie" title="Movie">
-                    Explore Movie Marvels: Spectacles Await You!
+                    Cinematic Journeys: Discover Unforgettable Stories
                   </ListItem>
-                  <ListItem href="/" title="Tv Shows">
-                    Live on TV Shows: Addiction await ≥
+                  <ListItem href={`/tv`} title="TV Shows">
+                    Binge-Worthy Series: Your Next Obsession Awaits
                   </ListItem>
-                  <ListItem href="/" title="Drama">
-                    Indulge in Drama: Emotions Await!
+                  <ListItem href={`/drama`} title="Drama">
+                    Emotional Rollercoasters: Immerse in Compelling Narratives
                   </ListItem>
-                  <ListItem href="/" title="Anime">
-                    Dive into Anime Worlds: Adventures Await!
+                  <ListItem href={`/anime`} title="Anime">
+                    Animated Wonders: Explore Vibrant Japanese Artistry
                   </ListItem>
                 </ul>
               </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/list" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  <List className="h-4 w-4" />
-                  <div className="px-2"> List </div>
-                </NavigationMenuLink>
-              </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

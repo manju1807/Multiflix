@@ -74,11 +74,11 @@ const HeroText = () => {
           custom={2}
         >
           <Button>
-            <Link href={`/auth/register`}>
+            <Link href={`/`}>
               Sign up
             </Link>
           </Button>
-          <Link href={`/changelog`}>
+          <Link href={`/`}>
             <Button variant="outline">Changelog</Button>
           </Link>
         </motion.div>

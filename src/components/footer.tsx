@@ -59,27 +59,21 @@ export const Footer = () => {
               <Section.Item>
                 <Link href={`/#features`}>Features</Link>
               </Section.Item>
-
               <Section.Item>
-                <Link href={`https://buymeacoffee.com/`}>Support</Link>
+                <Link href={`https://buymeacoffee.com/rmanju1807`}>Support</Link>
               </Section.Item>
-
               <Section.Item disabled>Download</Section.Item>
             </Section.List>
           </Section.Root>
-
           <Section.Root>
             <Section.Label>Company</Section.Label>
-
             <Section.List>
               <Section.Item disabled>About Us</Section.Item>
               <Section.Item disabled>Brand</Section.Item>
             </Section.List>
           </Section.Root>
-
           <Section.Root>
             <Section.Label>Developers</Section.Label>
-
             <Section.List>
               <Section.Item>
                 <Link href="https://github.com/manju1807">

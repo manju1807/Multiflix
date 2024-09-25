@@ -43,14 +43,14 @@ export default function VideoPlayer({ id }: any) {
   };
 
   return (
-    <div className="py-8 mx-auto max-w-5xl">
+    <div className="py-8 mx-auto max-w-6xl">
       <div className="flex flex-col text-center items-center justify-center">
         <div className="flex flex-col flex-wrap pb-4">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink href={`/movie/${id}`}>
-                Movie -  {id.charAt(0).toUpperCase() + id.slice(1)}
+                  Movie -  {id.charAt(0).toUpperCase() + id.slice(1)}
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -94,8 +94,8 @@ export default function VideoPlayer({ id }: any) {
           src={videoSources[selectedSource]}
           referrerPolicy="origin"
           allowFullScreen
-          width="100%"
-          height="450"
+          height={500}
+          width={1000}
           scrolling="no"
           className="max-w-3xl mx-auto px-4 pt-6"
         />

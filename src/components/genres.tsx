@@ -8,9 +8,22 @@ type Genre = 'Action and adventure' | 'Anime' | 'Comedy' | 'Documentary' | 'Dram
 
 interface GenreCardProps {
   genre: Genre;
+  imageUrl: string;
 }
 
-const GenreCard: React.FC<GenreCardProps> = ({ genre }) => {
+const genreImages: Record<Genre, string> = {
+  'Action and adventure': 'https://cdnuploads.aa.com.tr/uploads/Contents/2024/07/29/thumbs_b_c_8b15990eaf301e14ed598c9c6e5a39d2.jpg?v=194744',
+  'Anime': 'https://wallpapercave.com/wp/wp5342493.jpg',
+  'Comedy': 'https://wallpapercave.com/wp/wp5033829.jpg',
+  'Documentary': 'https://i.pinimg.com/736x/28/0b/e0/280be0ef212bf44bc796b59e8b9df8ca.jpg',
+  'Drama': 'https://rukminim2.flixcart.com/image/850/1000/kzsqykw0/poster/w/a/y/small-it-ok-not-to-be-seo-yea-ji-and-kim-soo-hyun-korean-drama-original-imagbq933z6jqums.jpeg?q=90&crop=false',
+  'Horror': 'https://wallpapercave.com/wp/wp1994790.jpg',
+  'Kids': 'https://wallpapercave.com/wp/wp2739947.jpg',
+  'Mystery and thrillers': 'https://wallpapercave.com/wp/wp7172825.jpg',
+  'Romance': 'https://wallpapercave.com/wp/wp5529917.jpg',
+};
+
+const GenreCard: React.FC<GenreCardProps> = ({ genre, imageUrl }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { amount: 0.5 });
 
@@ -27,7 +40,7 @@ const GenreCard: React.FC<GenreCardProps> = ({ genre }) => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://m.media-amazon.com/images/S/pv-target-images/cd041ddf6841d6f03d38fe96a739a8cee7320f023b486303f6cd8e98beba2d14._UR1920,1080_CLs%7C1920,1080%7C/G/bundle/BottomRightCardGradient16x9.png,/G/01/digital/video/merch/subs/benefit-id/m-r/Prime/logos/channels-logo-white.png%7C0,0,1920,1080+0,0,1920,1080+1578,808,263,156_SX720_FMjpg_.jpg')`
+              backgroundImage: `url('${imageUrl}')`
             }}
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
@@ -49,7 +62,7 @@ const Genres: React.FC = () => {
     <div className="w-full h-full overflow-y-auto">
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 p-2">
         {genres.map((genre) => (
-          <GenreCard key={genre} genre={genre} />
+          <GenreCard key={genre} genre={genre} imageUrl={genreImages[genre]} />
         ))}
       </div>
     </div>

@@ -12,10 +12,6 @@ export const mobileConfig: MobileConfig = {
       href: "/",
     },
     {
-      title: "Drama",
-      href: "/drama",
-    },
-    {
       title: "Movie",
       href: "/movie",
     },

@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 
 const DetailsContainerTemplate = ({ data, id, embed }: any) => {
   return (
-    <div className="">
+    <div className="antialiased border rounded-lg">
       <div className={cn("mx-auto max-w-6xl", embed ? "p-0" : "md:pt-4")}>
         <div
           className={cn(
