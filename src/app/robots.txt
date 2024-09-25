@@ -1,0 +1,14 @@
+# robots.txt for Multiplix
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of specific routes if needed
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://multiflix18.netlify.app/sitemap.xml
+
+# Crawl-delay for specific bots if needed
+# User-agent: SomeBot
+# Crawl-delay: 10
