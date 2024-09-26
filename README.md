@@ -52,7 +52,7 @@ This project is for demonstration purposes and uses the TMDB API for movie and T
 
 ### Video Demo
 
-https://github.com/user-attachments/assets/0652dc4d-5840-446f-856a-242edf361cdf
+https://github.com/user-attachments/assets/d0f31ffd-235a-40a2-84cb-bda56f6e9ed9
 
 ### Screenshots
 
@@ -68,6 +68,7 @@ https://github.com/user-attachments/assets/0652dc4d-5840-446f-856a-242edf361cdf
 ![Screenshot 10](https://github.com/user-attachments/assets/eb7525b3-0a23-4b36-84e3-288596eab664)
 ![Screenshot 11](https://github.com/user-attachments/assets/5e8c5e8b-1938-4e44-b3c7-e6beb73ab1fe)
 ![Screenshot 12](https://github.com/user-attachments/assets/42d45852-136d-4a06-bb50-e47c73311738)
+![Screenshot 13](https://github.com/user-attachments/assets/3da4574d-6eb4-4a5b-a928-187f7ce3eead)
 
 ---
 
