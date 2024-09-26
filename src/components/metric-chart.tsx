@@ -157,7 +157,7 @@ const InteractiveMetricsChart = () => {
     );
   };
   return (
-    <Card className="w-full h-full max-w-3xl mx-auto text-xs">
+    <Card className="w-full h-full max-w-3xl mx-auto text-xs bg-transparent">
       <CardContent className='flex flex-col py-4 items-center justify-center'>
         <Select
           value={selectedMetric}
