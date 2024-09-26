@@ -23,7 +23,8 @@ export const Poster = ({ className, ...props }: PosterProps) => {
         sizes="100%"
         alt={'alt'}
         src={`${Img1.src}`}
-        priority
+        loading="lazy"
+        quality={100}
       />
     </div>
   );
