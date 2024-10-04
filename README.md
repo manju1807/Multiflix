@@ -35,7 +35,7 @@ The development of Multiflix focused on creating a user-friendly interface with 
 5. 📊 Implemented streaming analytics for user insights
 6. ⚡ Optimized performance and responsiveness across devices
 
-Throughout the development process, we prioritized code quality, accessibility, and user experience.
+Throughout the development process, I prioritized code quality, accessibility, and user experience.
 
 ## 🏃‍♂️ Running the Project
 
